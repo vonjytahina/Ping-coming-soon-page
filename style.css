@@ -1,0 +1,228 @@
+/* import font family*/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+/* colors */
+:root {
+  --primary-blue: hsl(223, 87%, 63%);
+
+  --secondary-pale-blue: hsl(223, 100%, 88%);
+  --secondary-light-red: hsl(354, 100%, 66%);
+
+  --neutral-gray: hsl(0, 0%, 59%);
+  --neutral-very-dark-blue: hsl(209, 33%, 12%);
+}
+
+/* global style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 20px;
+}
+
+/* container */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 1024px;
+  height: auto;
+  background: #fff;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.container .app {
+  width: 640px;
+  height: auto;
+  margin: 80px auto 70px;
+  text-align: center;
+}
+
+.container .app .title {
+  font-size: 50px;
+  color: var(--neutral-gray);
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+.container .app span {
+  font-size: 50px;
+  color: var(--neutral-very-dark-blue);
+  font-weight: 700;
+}
+
+.container .app .subscribe {
+  color: var(--neutral-very-dark-blue);
+}
+
+.container .app .notfication {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 45px;
+  margin-bottom: 90px;
+}
+
+.container .app .notfication .input-container {
+  width: 425px;
+}
+
+.container .app .notfication .input-container input {
+  width: 100%;
+  height: 60px;
+  border: 1px solid var(--secondary-pale-blue);
+  outline: none;
+  border-radius: 30px;
+  padding-left: 30px;
+  font-size: 18px;
+  color: var(--neutral-very-dark-blue);
+}
+
+.container .app .notfication .input-container input::placeholder {
+  color: var(--secondary-pale-blue);
+}
+
+.container .app .notfication .input-container .error-message {
+  color: var(--secondary-light-red);
+  font-size: 13px;
+  margin-top: 10px;
+  text-align: left;
+  margin-left: 30px;
+  font-style: italic;
+  display: none;
+  margin-bottom: 15px;
+}
+
+.container .app .notfication .submit-button {
+  width: 200px;
+  height: 60px;
+  background: var(--primary-blue);
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  transition: background .3s ease-in-out;
+}
+
+.container .app .notfication .submit-button:hover {
+  background: #7195f5;
+}
+
+.container .app .illustration {
+  width: 100%;
+  height: 390px;
+  background: url('images/illustration-dashboard.png');
+  background-size: 100%;
+}
+
+.container .app .social-network {
+  margin-top: 70px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.container .app .social-network>div {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  border: 1px solid var(--secondary-pale-blue);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease-in-out;
+}
+
+.container .app .social-network>div:hover {
+  border: 1px solid var(--primary-blue);
+  background: var(--primary-blue);
+}
+
+.container .app .social-network>div svg g path {
+  fill: var(--primary-blue) !important;
+  transition: fill .3s ease-in-out;
+}
+
+.container .app .social-network>div:hover svg g path {
+  fill: #fff !important;
+}
+
+.container .app .copyright {
+  color: var(--neutral-gray);
+  font-size: 12px;
+}
+
+.attribution {
+  margin: 20px auto;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  font-size: 11px;
+  color: hsl(228, 45%, 44%);
+}
+
+/* responsive */
+
+@media screen and (max-width: 650px) {
+  .container {
+    min-height: 820px;
+  }
+
+  .container .app {
+    width: 90%;
+  }
+
+  .container .app .title {
+    font-size: 26px;
+    margin-top: 40px;
+  }
+
+  .container .app span {
+    font-size: 26px;
+  }
+
+  .container .app .subscribe {
+    font-size: 14px;
+  }
+
+  .container .app .notfication {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container .app .notfication .input-container {
+    width: 85%;
+  }
+
+  .container .app .notfication .input-container .error-message {
+    text-align: center;
+    margin-left: 0px;
+  }
+
+  .container .app .notfication .submit-button {
+    width: 85%;
+    margin-top: 15px;
+  }
+
+  .container .app .illustration {
+    width: 100%;
+    height: auto;
+    padding-bottom: 60%;
+    background: url('images/illustration-dashboard.png') no-repeat;
+    background-size: 100%;
+  }
+
+  .container .app .copyright {
+    font-size: 10px;
+  }
+}
